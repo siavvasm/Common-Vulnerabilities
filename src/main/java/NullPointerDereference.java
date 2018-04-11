@@ -26,6 +26,7 @@ public class NullPointerDereference {
         	response.getWriter().println(data);
         } 
     }
+    
 
 	public static void main(String[] args) throws ServletException, IOException {
 		/*
