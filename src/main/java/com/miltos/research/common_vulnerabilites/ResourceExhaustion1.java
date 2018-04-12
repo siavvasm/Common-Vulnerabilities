@@ -1,9 +1,12 @@
 package com.miltos.research.common_vulnerabilites;
 
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import com.miltos.research.supporting.ClientSocketThread;
 
 public class ResourceExhaustion1 {
 	
@@ -59,6 +62,10 @@ public class ResourceExhaustion1 {
 		} catch (IOException ex) {
 			// Log the event ...
 		}
+	}
+	
+	public static boolean checkForMoreConnections() {
+		return true;
 	}
 
 }

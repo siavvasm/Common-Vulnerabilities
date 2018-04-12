@@ -2,9 +2,14 @@ package com.miltos.research.common_vulnerabilites;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.logging.Logger;
+
+import org.apache.log4j.Logger;
+
+
 
 public class ImproperExceptionHandling {
+
+	final static Logger logger = Logger.getLogger(Logger.class);
 	
 	public static void vulnerableCode() {
 		try {
@@ -20,7 +25,7 @@ public class ImproperExceptionHandling {
 		try {
 			FileReader fr = new FileReader("path/to/file");
 		} catch(IOException e) {
-			Logger.log(e.getMessage());
+			logger.debug(e.getMessage());
 		} finally {
 			// Relese the resource...
 		}

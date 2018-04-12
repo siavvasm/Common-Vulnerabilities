@@ -7,7 +7,7 @@ import com.miltos.research.supporting.Request;
 
 public class SQLInjection {
 	
-	Connection conn = new Connection();
+	static Connection conn = new Connection();
 
 	/** Vulnerable **/
 	public static void vulnerableCode(Request request) {
@@ -22,10 +22,10 @@ public class SQLInjection {
 						+ lastName +"'";
 		
 		// 3. Submit the query
-		try {
-			Statement statement = conn.createStatement("");
-		 	ResultSet results = statement.executeQuery(query);
-		}
+//		try {
+//			Statement statement = conn.createStatement("");
+//		 	ResultSet results = statement.executeQuery(query);
+//		}
 	}
 	
 	/** Clean **/
@@ -38,14 +38,14 @@ public class SQLInjection {
 		
 		// 2. Construct the query
 		String query = "SELECT * FROM Users WHERE Users.firstname = '?' AND Users.surname = '?'";
-		PreparedStatement pstmt = conn.prepareStatement(query);
-		pstmt.setString(1, firstName);
-		pstmt.setString(2, lastName);
+//		PreparedStatement pstmt = conn.prepareStatement(query);
+//		pstmt.setString(1, firstName);
+//		pstmt.setString(2, lastName);
 		
 		// 3. Submit the query
-		try {
-			ResultSet results = pstmt.execute( );;
-		}
+//		try {
+//			ResultSet results = pstmt.execute( );
+//		}
 	}
 
 }

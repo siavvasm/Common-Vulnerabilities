@@ -70,8 +70,8 @@ public class OSCommandInjection {
 		Matcher matcher = nonAllowableChars.matcher(parameter);
 		
 		if(!matcher.find()) {
-			Runtime rt = Runtime.getRuntime();
-			Process exec = rt.exec("cmd.exe /C program.exe -value" + parameter);
+			Runtime runTime = Runtime.getRuntime();
+			Process execProg = runTime.exec("cmd.exe /C program.exe -value" + parameter);
 		} else {
 			// Do not execute the command...
 			// Inform the user ...
@@ -83,8 +83,8 @@ public class OSCommandInjection {
 		 */
 		parameter = request.getParameter("input");
 		String sanitizedParam = parameter.replaceAll("...RegEx of non-allowable characters...", "");
-		Runtime rt = Runtime.getRuntime();
-		Process exec = rt.exec("cmd.exe /C program.exe -value" + parameter);
+		Runtime runTime = Runtime.getRuntime();
+		Process execProg = runTime.exec("cmd.exe /C program.exe -value" + parameter);
 	}
 
 }

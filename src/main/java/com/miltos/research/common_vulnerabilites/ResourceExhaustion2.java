@@ -7,24 +7,24 @@ package com.miltos.research.common_vulnerabilites;
  */
 public class ResourceExhaustion2 {
 	
-	public static longRunningProcessVulnerable() {
+	public static void longRunningProcessVulnerable() {
 		
 		while (true) {
 			//...
-			receivingSocket.receive(receivedPacket);
-			String message = new String(rxBuffer, 0, receivedPacket.getLength()); 
+//			receivingSocket.receive(receivedPacket);
+//			String message = new String(rxBuffer, 0, receivedPacket.getLength()); 
 			// Do something with the message...
 		}
 	}
 	
-	public static longRunningProcessClean() {
+	public static void longRunningProcessClean() {
 		
 		String message = "";
 		
 		while (true) {
 			//...
-			receivingSocket.receive(receivedPacket);
-			message = new String(rxBuffer, 0, receivedPacket.getLength()); 
+//			receivingSocket.receive(receivedPacket);
+//			message = new String(rxBuffer, 0, receivedPacket.getLength()); 
 			// Do something with the message...
 		}
 	}

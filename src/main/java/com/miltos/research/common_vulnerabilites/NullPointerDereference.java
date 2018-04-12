@@ -1,3 +1,4 @@
+package com.miltos.research.common_vulnerabilites;
 import java.io.IOException;
 import java.io.PrintWriter;
 
